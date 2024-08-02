@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false
+    username: root
+    password: 11752037466
+
+  #JPA Settings
+
+  jpa:
+    hibernate:
+      ddl-auto: update  #create - drop and recreate
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        #include: "*" # Include everything
+        include: "health,beans,metrics"
+        exclude: "caches"
+      base-path: "/management-dashboard"
+  endpoint:
+    health:
+      show-details: always
+
+# Debugging in terminal, you can comment those
+#logging:
+ # level:
+  #  com.project.rest_demo.controller: DEBUG
+   # root: DEBUG
