@@ -38,6 +38,8 @@ build/
 ### Sensitive configuration files ###
 application.yaml
 application.properties
+/src/main/resources/application.yaml
+/src/main/resources/application.properties
 
 ### Operating system files ###
 .DS_Store
